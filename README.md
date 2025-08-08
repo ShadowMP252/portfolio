@@ -14,22 +14,22 @@ The project fulfills all **Web Development Fundamentals** rubric requirements, i
 ---
 
 ## File Structure
-project-root/
-│
-├── resume.html
-├── cover-letter.html
-├── career-goals.html
-│
-├── style.css # Global stylesheet
-├── main.js # Shared JavaScript functionality
-│
-├── assets/
-│ ├── images/ # Local image files
-│ ├── audio/ # Local audio files
-│ └── video/ # Local video files
-│
-├─ README.md
-└──.gitignore
+project-root/ \
+│ \
+├── resume.html \
+├── cover-letter.html \
+├── career-goals.html \
+│ \
+├── style.css # Global stylesheet \
+├── main.js # Shared JavaScript functionality \
+│ \
+├── assets/ \
+│ ├── images/ # Local image files \
+│ ├── audio/ # Local audio files \
+│ └── video/ # Local video files \
+│ \
+├─ README.md \
+└──.gitignore 
 
 
 ---
