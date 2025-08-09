@@ -85,10 +85,8 @@ function wait(ms) {
 }
 
 async function showSkills() {
-  const pane = document.querySelector(".pane");
   const mount = document.getElementById("skills-section");
 
-  // Build the section structure
   const header = document.createElement("h3");
   header.className = "pane-title";
   header.textContent = "./skills";
@@ -98,7 +96,6 @@ async function showSkills() {
   line.className = "prompt";
   line.innerHTML = '<span class="sig">$</span> listing skills...';
 
-  // list
   const ul = document.createElement("ul");
   ul.style.listStyle = "square";
   ul.style.margin = "8px 0 0 22px";
@@ -108,7 +105,6 @@ async function showSkills() {
     <li>HTML5 / CSS3 • Responsive layouts</li>
   `;
 
-  // table (rubric: caption + 4 cols x 3 rows)
   const table = document.createElement("table");
   table.className = "skills-table";
   table.innerHTML = `
@@ -129,7 +125,6 @@ async function showSkills() {
       </tbody>
   `;
 
-  // mount skeleton (hidden first)
   mount.innerHTML = "";
   mount.appendChild(header);
   mount.appendChild(line);
@@ -137,7 +132,6 @@ async function showSkills() {
   mount.appendChild(table);
   mount.style.opacity = 0;
 
-  // type the header
   const hSpan = document.createElement("span");
   hSpan.dataset.full = header.textContent;
   hSpan.textContent = "";
@@ -145,11 +139,9 @@ async function showSkills() {
   header.appendChild(hSpan);
   moveCursorAfter(hSpan);
 
-  // reveal section, type header, then the line
   mount.style.opacity = 1;
   await typeAcross([hSpan], 48);
 
-  // prepare & type the "listing skills..." line AFTER the $
   const sig = line.querySelector(".sig");
   const after = document.createElement("span");
   while (sig.nextSibling) after.appendChild(sig.nextSibling);
@@ -166,6 +158,7 @@ async function showSkills() {
     const pane = document.querySelector(".pane");
     pane.style.minHeight = pane.scrollHeight + "px";
   });
+
 }
 
 document.addEventListener("DOMContentLoaded", animatePane);
