@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tyler's Resume</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js" defer></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tyler's Resume</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./main.js" defer></script>
+    </head>
+    <body>
+        <div class="window">
+        <div class="terminal-shell">
+            <aside class="sidebar">
+            <span class="sidebar-title">Creating The Future</span>
+            <div class="avatar">
+                <img
+                    class="avatarImg"
+                    src="./assets/images/Tyler.jpg"
+                    alt="portrait"
+                />
+            </div>
 
-  </head>
-  <body>
-    <div class="window">
-      <div class="terminal-shell">
-        <aside class="sidebar">
-        <span class="sidebar-title">Creating The Future</span>
-          <div class="avatar">
-            <img
-              class="avatarImg"
-              src="./assets/images/Tyler.jpg"
-              alt="portrait"
-            />
-          </div>
+            <h1 class="name">Tyler Fletcher</h1>
+            <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
 
-          <h1 class="name">Tyler Fletcher</h1>
-          <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
-
-          <nav class="dock">
-            <a href="./resume.html">
+            <nav class="dock">
+                <a href="./resume.html">
                 <button class="dock-btn" aria-label="Home">
-                    <img src="./assets/images/home-gray-64x64.png"
-                        onmouseout="this.src='./assets/images/home-gray-64x64.png'"
-                        onmouseover="this.src='./assets/images/home-green-64x64.png'"
-                        alt="Home Icon"
-                        class="homeIcons">
+                    <img
+                    src="./assets/images/home-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/home-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/home-green-64x64.png'"
+                    alt="Home Icon"
+                    class="homeIcons"
+                    />
                 </button>
-            </a>
-            <a href="./cover-letter.html">
+                </a>
+                <a href="./cover-letter.html">
                 <button class="dock-btn" aria-label="Cover Letter">
-                        <img src="./assets/images/cover-letter-gray-64x64.png"
+                    <img
+                        src="./assets/images/cover-letter-gray-64x64.png"
                         onmouseout="this.src='./assets/images/cover-letter-gray-64x64.png'"
                         onmouseover="this.src='./assets/images/cover-letter-green-64x64.png'"
                         alt="Cover Letter Icon"
-                        class="homeIcons">
+                        class="homeIcons"
+                    />
                 </button>
-            </a>
-            <a href="./career-goals.html">
+                </a>
+                <a href="./career-goals.html">
                 <button class="dock-btn" aria-label="Career Goals">
-                    <img src="./assets/images/target-gray-64x64.png"
+                    <img
+                        src="./assets/images/target-gray-64x64.png"
                         onmouseout="this.src='./assets/images/target-gray-64x64.png'"
                         onmouseover="this.src='./assets/images/target-green-64x64.png'"
                         alt="Career Goals Icon"
-                        class="homeIcons">
+                        class="homeIcons"
+                    />
                 </button>
-            </a>
-          </nav>
-        </aside>
+                </a>
+            </nav>
+            </aside>
 
-        <main class="pane">
-          <h2 class="pane-title">Welcome To the Lower Level</h2>
-
-          <p class="prompt">
-            <span class="sig">$</span>My name is
-            <strong style="color: yellow">Tyler Fletcher</strong>
-          </p>
-          <br/>
-          <p class="prompt">
-            <span class="sig">$</span>Walk through the world of a
-            <em>Systems Architect</em>
-          </p>
-          <br/>
-          <hr class="rule" />
-          <p class="prompt" style="padding-top: 165px">
-            <span class="sig">$</span>cd <strong>skills</strong>
-          </p>
-        </main>
-      </div>
-    </div>
-  </body>
+            <main class="pane">
+            <h2 class="pane-title">Welcome To the Lower Level</h2>
+            <section id="skills-section"></section>
+            <p class="prompt">
+                <span class="sig">$</span>My name is
+                <strong style="color: yellow">Tyler Fletcher</strong>
+            </p>
+            <br />
+            <p class="prompt">
+                <span class="sig">$</span>Walk through the world of a
+                <em>Systems Architect</em>
+            </p>
+            <br />
+            <hr class="rule" />
+            <p class="prompt" style="padding-top: 165px">
+                <span class="sig">$</span>./<strong>skills</strong>
+            </p>
+            </main>
+        </div>
+        </div>
+    </body>
 </html>

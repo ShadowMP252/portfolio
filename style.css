@@ -34,10 +34,10 @@ body {
 }
 
 .window {
-  background: transparent;     /* remove gray fill */
-  padding: 0;                   /* no extra padding */
-  border-radius: 0;             /* no outer curve */
-  box-shadow: none;             /* remove outer shadow */
+  background: transparent;     
+  padding: 0;                  
+  border-radius: 0;           
+  box-shadow: none;             
 }
 
 .sidebar-title{
@@ -121,3 +121,43 @@ body {
 
 .rule { opacity: 1; }
 
+#skills-section {
+  opacity: 0;
+  transition: opacity .35s ease;
+  margin-bottom: 0;
+  padding-bottom: -100px;
+}
+
+#skills-section ul { margin: 0 0 8px 22px; }
+
+.skills-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 50px 0 0 0;
+  color: #C1C1C1;
+  table-layout: fixed;
+}
+
+.skills-table caption {
+  text-align: left;
+  color: #4AF262;
+  margin-bottom: 4px;
+  padding-bottom: 20px;
+}
+
+.skills-table th, .skills-table td {
+  border: 1px solid #1c1c1c;
+  padding: 6px 8px;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.skills-table th {
+  background: #0e0e0e;
+  font-weight: 600;
+}
+.skills-table th:nth-child(1), .skills-table td:nth-child(1) { width: 18%; }
+.skills-table th:nth-child(2), .skills-table td:nth-child(2) { width: 12%; text-align: center; }
+.skills-table th:nth-child(3), .skills-table td:nth-child(3) { width: 18%; }
