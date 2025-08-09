@@ -89,8 +89,7 @@ async function showSkills() {
 
   const header = document.createElement("h3");
   header.className = "pane-title";
-  header.textContent = "> ./skills";
-  // header.innerHTML = '<span class="sig">></span> <span style="color:#C1C1C1;">./skills</span>';
+  header.textContent = "> ./skills ";
 
   const line = document.createElement("p");
   line.className = "prompt";
@@ -103,6 +102,8 @@ async function showSkills() {
     <li>Python • Flask • Data wrangling</li>
     <li>JavaScript • DOM • Async</li>
     <li>HTML5 / CSS3 • Responsive layouts</li>
+    <li>Temp Placeholder</li>
+    <li>Temp Placeholder</li>
   `;
 
   const table = document.createElement("table");
@@ -113,15 +114,13 @@ async function showSkills() {
       <tr><th>Tech</th><th>Years</th><th>Level</th><th>Notes</th></tr>
     </thead>
     <tbody>
-      <tr><td>Python</td><td>3</td><td>Advanced</td><td>APIs, data tasks</td></tr>
-      <tr><td>JavaScript</td><td>3</td><td>Advanced</td><td>Vanilla, DOM, fetch</td></tr>
-      <tr><td>HTML/CSS</td><td>5</td><td>Advanced</td><td>Grid/Flex, a11y</td></tr>
-      <tr><td>Python</td><td>3</td><td>Advanced</td><td>APIs, data tasks</td></tr>
-      <tr><td>JavaScript</td><td>3</td><td>Advanced</td><td>Vanilla, DOM, fetch</td></tr>
-      <tr><td>HTML/CSS</td><td>5</td><td>Advanced</td><td>Grid/Flex, a11y</td></tr>
-      <tr><td>Python</td><td>3</td><td>Advanced</td><td>APIs, data tasks</td></tr>
-      <tr><td>JavaScript</td><td>3</td><td>Advanced</td><td>Vanilla, DOM, fetch</td></tr>
-      <tr><td>HTML/CSS</td><td>5</td><td>Advanced</td><td>Grid/Flex, a11y</td></tr>
+      <tr><td>Python</td><td>10</td><td>Advanced</td><td>APIs, data tasks</td></tr>
+      <tr><td>JavaScript</td><td>6</td><td>Advanced</td><td>Vanilla, DOM, fetch</td></tr>
+      <tr><td>HTML/CSS</td><td>6</td><td>Advanced</td><td>Grid/Flex, a11y</td></tr>
+      <tr><td>Java</td><td>3</td><td>Proficient</td><td>Engines, UI, Networking</td></tr>
+      <tr><td>C++</td><td>3</td><td>Proficient</td><td>Memory Modeling, Low Level Optimization, Engine Design</td></tr>
+      <tr><td>Robotics</td><td>1</td><td>Basic</td><td>Plastics, CF, Assembly, Modeling</td></tr>
+      <tr><td>Embedded-Devices</td><td>4</td><td>Advanced</td><td>Kernal Mapping, Fine Tuning, Deployments</td></tr>
       </tbody>
   `;
 
@@ -137,28 +136,20 @@ async function showSkills() {
   hSpan.textContent = "";
   header.textContent = "";
   header.appendChild(hSpan);
-  moveCursorAfter(hSpan);
+    
+    const scrollLine = document.createElement("p");
+    scrollLine.innerHTML = '<span class="sig">></span> <span class="cmd"> echo "Please Scroll Down" </span> ';
+    scrollLine.style.marginBottom = "-25px";
+    scrollLine.style.marginTop= "50px";
+    mount.appendChild(scrollLine);
 
-  mount.style.opacity = 1;
+    // place cursor after the command span
+     const cmd = scrollLine.querySelector('.cmd');
+    moveCursorAfter(cmd);     
+    mount.style.opacity = 1;
   await typeAcross([hSpan], 48);
-
-  const sig = line.querySelector(".sig");
-  const after = document.createElement("span");
-  while (sig.nextSibling) after.appendChild(sig.nextSibling);
-  line.appendChild(after);
-  const spans = wrapTextNodes(after);
-  moveCursorAfter(after);
-  await typeAcross(spans, 46);
-
-  await wait(2000);
-  ul.style.opacity = 1;
-  table.style.opacity = 1;
-
-  requestAnimationFrame(() => {
-    const pane = document.querySelector(".pane");
-    pane.style.minHeight = pane.scrollHeight + "px";
-  });
 
 }
 
 document.addEventListener("DOMContentLoaded", animatePane);
+
