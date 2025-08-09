@@ -71,7 +71,7 @@ async function animatePane() {
   }
   await wait(2500);
 
-  hr.style.opacity = 0;
+  hr.remove();
 
   for (const p of prompts) {
     p.style.transition = 'opacity .3s ease';
@@ -89,8 +89,8 @@ async function showSkills() {
 
   const header = document.createElement("h3");
   header.className = "pane-title";
-  header.textContent = "./skills";
-  header.style.paddingBottom = "-140px";
+  header.textContent = "> ./skills";
+  // header.innerHTML = '<span class="sig">></span> <span style="color:#C1C1C1;">./skills</span>';
 
   const line = document.createElement("p");
   line.className = "prompt";
