@@ -5,7 +5,7 @@ This is a **personal portfolio website** built entirely with **HTML, CSS, and Ja
 The site follows a **terminal-based UI/UX** theme, simulating a retro command-line interface with animated cursor effects, a boot sequence, and scroll-locked terminal output.
 
 The project fulfills all **Web Development Fundamentals** rubric requirements, including:
-- Three HTML pages: **Résumé**, **Cover Letter**, and **Career Goals**
+- Three HTML pages: **Resume**, **Cover Letter**, and **Career Goals**
 - One shared external CSS stylesheet
 - At least one local image, audio file, and video file
 - JavaScript functionality to display the current date and log a custom console message
@@ -26,7 +26,8 @@ project-root/ \
 ├── assets/ \
 │ ├── images/ # Local image files \
 │ ├── audio/ # Local audio files \
-│ └── video/ # Local video files \
+│ ├── video/ # Local video files \
+│ └── fonts/ # Local font files \
 │ \
 ├─ README.md \
 └──.gitignore 
@@ -37,9 +38,8 @@ project-root/ \
 ## Features
 - **Terminal UI Theme**: Styled to resemble a command-line interface with a blinking cursor and simulated typing effects.
 - **Boot Sequence**: Plays audio/video intro for a retro "system starting" feel.
-- **Responsive Layout**: Works across desktop and mobile browsers without breaking theme immersion.
 - **Form Handling**: Career Goals page contains a "Contact Me" form with text fields, radio buttons, and select options.
-- **Tables and Lists**: Résumé contains structured table data for skills and experience.
+- **Tables and Lists**: Resume contains structured table data for skills and experience.
 - **JavaScript Integration**:
   - Dynamically displays the current date in the header.
   - Logs a custom boot message to the console.

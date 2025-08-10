@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cover Letter</title>
+    <title>Career Goals</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./main.js" defer></script>
   </head>
@@ -61,9 +61,9 @@
               <a href="mailto:tfletcher@osiristechco.com">
                 <button class="dock-btn" aria-label="Email">
                   <img
-                    src="./assets/images/email-gray-64x64.png"
-                    onmouseout="this.src='./assets/images/email-gray-64x64.png'"
-                    onmouseover="this.src='./assets/images/email-green-64x64.png'"
+                    src="./assets/images/paper-plane-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/paper-plane-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/paper-plane-green-64x64.png'"
                     alt="Email Icon"
                     class="homeIcons"
                   />
@@ -120,23 +120,31 @@
           </nav>
         </aside>
         <main class="pane">
-          <header class="site-header"><h1>Career Goals</h1></header>
+          <header class="site-header">
+            <h1 style="margin-top: 0">Career Goals</h1>
+          </header>
           <section class="letter-section">
             <ol class="goalsList">
-              <li style="padding: 14px 0">
-                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              <li style="padding-bottom: 4px;">
+                Develop a full autonomous AI robotics framework. Using my custom
+                Distributed AI Platform.
               </li>
-              <li style="padding: 14px 0">
-                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              <li style="padding: 4px 0">
+                Continue my development in AI Research and Development, pushing
+                the boundaries towards AGI.
               </li>
-              <li style="padding: 14px 0">
-                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              <li style="padding: 4px 0">
+                Publish a technical and philosophical book on AI and
+                consciousness.
               </li>
-              <li style="padding: 14px 0">
-                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              <li style="padding: 4px 0">
+                Master full-stack systems architecture from hardware to cloud to
+                UI.
               </li>
-              <li style="padding: 14px 0">
-                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              <li style="padding: 4px 0">
+                Deploy AI Embedded Doppler/LIDAR Weather Detection Systems to
+                predict incoming severe weather, earlier than existing radar
+                systems.
               </li>
             </ol>
             <form
@@ -167,33 +175,40 @@
                 <label for="formMessage">Message</label>
                 <input type="textarea" id="formMessage" required />
               </div>
-              <div class="formGroup">
-                <input type="radio" id="formRadioAM" required />
-                <input type="radio" id="formRadioPM" required />
-                <input type="radio" id="formRadioAny" required />
-              </div>
+              <fieldset
+                style="
+                  border: 1px solid #2b2b2b;
+                  border-radius: 8px;
+                  padding: 10px;
+                "
+              >
+                <legend>Best contact time</legend>
+                <label><input type="radio" name="time" value="am" /> AM</label>
+                <label><input type="radio" name="time" value="pm" /> PM</label>
+                <label
+                  ><input type="radio" name="time" value="any" /> Anytime</label
+                >
+              </fieldset>
               <div class="selectForm">
-                <select>
+                <select id="formSelect" style="margin-top: 10px;">
                   <option value="" disabled="disabled" selected="selected">
                     Contact Method
                   </option>
-                  <option value="1">Phone</option>
-                  <option value="2">Email</option>
-                  <option value="3">Text</option>
+                  <option value="1" id="selectPhone">Phone</option>
+                  <option value="2" id="selectEmail">Email</option>
+                  <option value="3" id="selectText">Text</option>
                 </select>
               </div>
               <div class="formGroup">
-                <button class="form-btn" aria-label="Email">
-                  <img
-                    src="./assets/images/paper-plane-gray-64x64.png"
-                    onmouseout="this.src='./assets/images/paper-plane-gray-64x64.png'"
-                    onmouseover="this.src='./assets/images/paper-plane-green-64x64.png'"
-                    alt="Email Icon"
-                    class="formButton"
-                  />
-                </button>
+                <button class="dock-btn2" aria-label="Email">Send</button>
               </div>
             </form>
+            <div class="formGroup">
+              <button id="playVideoBtn" class="dock-btn2" aria-label="Video">
+                <!-- Video is presented using JavaScript -->
+                Play Video Again
+              </button>
+            </div>
           </section>
           <footer class="site-footer">
             <small>&copy; <span id="year">2025</span> Tyler Fletcher</small>
