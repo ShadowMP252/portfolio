@@ -1,101 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tyler's Resume</title>
-        <link rel="stylesheet" href="./style.css" />
-        <script src="./main.js" defer></script>
-    </head>
-    <body>
-        <div class="window">
-        <div class="terminal-shell">
-            <aside class="sidebar">
-            <div id="current-date"></div>
-            <span class="sidebar-title">Creating The Future</span>
-            <div class="avatar">
-                <img
-                    class="avatarImg"
-                    src="./assets/images/Tyler.jpg"
-                    alt="portrait"
-                />
-            </div>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tyler's Resume</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="window">
+      <div class="terminal-shell">
+        <aside class="sidebar">
+          <div id="current-date"></div>
+          <span class="sidebar-title">Creating The Future</span>
+          <div class="avatar">
+            <img
+              class="avatarImg"
+              src="./assets/images/Tyler.jpg"
+              alt="portrait"
+            />
+          </div>
 
-            <h1 class="name">Tyler Fletcher</h1>
-            <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
-
+          <h1 class="name">Tyler Fletcher</h1>
+          <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
+          <div class="socialIcons">
             <nav class="dock">
-                <a href="./resume.html">
-                <button class="dock-btn" aria-label="Home">
-                    <img
-                    src="./assets/images/home-gray-64x64.png"
-                    onmouseout="this.src='./assets/images/home-gray-64x64.png'"
-                    onmouseover="this.src='./assets/images/home-green-64x64.png'"
-                    alt="Home Icon"
+              <a href="https://github.com/ShadowMP252">
+                <button class="dock-btn" aria-label="Github">
+                  <img
+                    src="./assets/images/github-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/github-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/github-green-64x64.png'"
+                    alt="GitHub Icon"
                     class="homeIcons"
-                    />
+                  />
                 </button>
-                </a>
-                <a href="./cover-letter.html">
-                <button class="dock-btn" aria-label="Cover Letter">
-                    <img
-                        src="./assets/images/cover-letter-gray-64x64.png"
-                        onmouseout="this.src='./assets/images/cover-letter-gray-64x64.png'"
-                        onmouseover="this.src='./assets/images/cover-letter-green-64x64.png'"
-                        alt="Cover Letter Icon"
-                        class="homeIcons"
-                    />
+              </a>
+              <a href="https://www.linkedin.com/in/tyler-f-0a4347269/">
+                <button class="dock-btn" aria-label="LinkedIn">
+                  <img
+                    src="./assets/images/linkedin-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/linkedin-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/linkedin-green-64x64.png'"
+                    alt="LinkedIn Icon"
+                    class="homeIcons"
+                  />
                 </button>
-                </a>
-                <a href="./career-goals.html">
-                <button class="dock-btn" aria-label="Career Goals">
-                    <img
-                        src="./assets/images/target-gray-64x64.png"
-                        onmouseout="this.src='./assets/images/target-gray-64x64.png'"
-                        onmouseover="this.src='./assets/images/target-green-64x64.png'"
-                        alt="Career Goals Icon"
-                        class="homeIcons"
-                    />
+              </a>
+              <a href="https://leetcode.com">
+                <button class="dock-btn" aria-label="LeetCode">
+                  <img
+                    src="./assets/images/leetcode-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/leetcode-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/leetcode-green-64x64.png'"
+                    alt="LeetCode Icon"
+                    class="homeIcons"
+                  />
                 </button>
-                </a>
-                <button class="dock-btn" aria-label="Music Button">
-                    <img
-                        src="./assets/images/music-note-gray-64x64.png"
-                        onmouseout="this.src='./assets/images/music-note-gray-64x64.png'"
-                        onmouseover="this.src='./assets/images/music-note-green-64x64.png'"
-                        alt="Career Goals Icon"
-                        class="homeIcons"
-                        id="musicButton"
-                    />
-                    <audio id="audio" src="./assets/audio/bg.mp3"></audio>
+              </a>
+              <a href="mailto:tfletcher@osiristechco.com">
+                <button class="dock-btn" aria-label="Email">
+                  <img
+                    src="./assets/images/paper-plane-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/paper-plane-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/paper-plane-green-64x64.png'"
+                    alt="Email Icon"
+                    class="homeIcons"
+                  />
                 </button>
+              </a>
             </nav>
-            </aside>
+          </div>
 
-            <main class="pane">
-            <h2 class="pane-title">Welcome To the Lower Level</h2>
-            <section id="skills-section"></section>
-            <section id="certifications-section"></section>
-            <section id="experience-section"></section>
-            <section id="projects-section"></section>
-            <section id="video-section"></section>
-            <section id="blog-section"></section>
-            <p class="prompt">
-                <span class="sig">></span>My name is
-                <strong style="color: yellow">Tyler Fletcher</strong>
-            </p>
-            <br />
-            <p class="prompt">
-                <span class="sig">></span>Walk through the world of a
-                <em>Systems Architect</em>
-            </p>
-            <br />
-            <hr class="rule" />
-            <p class="prompt" style="padding-top: 165px">
-                <span class="sig">></span>./<strong>skills</strong>
-            </p>
-            </main>
-        </div>
-        </div>
-    </body>
+          <nav class="dock">
+            <a href="./resume.html">
+              <button class="dock-btn" aria-label="Home">
+                <img
+                  src="./assets/images/home-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/home-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/home-green-64x64.png'"
+                  alt="Home Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./cover-letter.html">
+              <button class="dock-btn" aria-label="Cover Letter">
+                <img
+                  src="./assets/images/cover-letter-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/cover-letter-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/cover-letter-green-64x64.png'"
+                  alt="Cover Letter Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./career-goals.html">
+              <button class="dock-btn" aria-label="Career Goals">
+                <img
+                  src="./assets/images/target-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/target-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/target-green-64x64.png'"
+                  alt="Career Goals Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <button class="dock-btn" aria-label="Music Button">
+              <img
+                src="./assets/images/music-note-gray-64x64.png"
+                onmouseout="this.src='./assets/images/music-note-gray-64x64.png'"
+                onmouseover="this.src='./assets/images/music-note-green-64x64.png'"
+                alt="Career Goals Icon"
+                class="homeIcons"
+                id="musicButton"
+              />
+              <audio id="audio" src="./assets/audio/bg.mp3"></audio>
+            </button>
+          </nav>
+        </aside>
+
+        <main class="pane">
+          <h2 class="pane-title">Welcome To the Lower Level</h2>
+          <section id="skills-section"></section>
+          <section id="certifications-section"></section>
+          <section id="experience-section"></section>
+          <section id="projects-section"></section>
+          <section id="video-section"></section>
+          <section id="blog-section"></section>
+          <p class="prompt">
+            <span class="sig">></span>My name is
+            <strong style="color: yellow">Tyler Fletcher</strong>
+          </p>
+          <br />
+          <p class="prompt">
+            <span class="sig">></span>Walk through the world of a
+            <em>Systems Architect</em>
+          </p>
+          <br />
+          <hr class="rule" />
+          <p class="prompt" style="padding-top: 165px">
+            <span class="sig">></span>./<strong>skills</strong>
+          </p>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>

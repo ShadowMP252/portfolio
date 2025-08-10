@@ -3,63 +3,204 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Goals</title>
+    <title>Cover Letter</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
-    <header><h1>Career Goals</h1></header>
-    <nav class="dock">
-      <a href="./resume.html">Résumé</a> ·
-      <a href="./cover-letter.html">Cover Letter</a> ·
-      <a href="./career-goals.html">Career Goals</a>
-    </nav>
-    <main>
-      <section>
-        <h2>Vision</h2>
-        <img src="./assets/images/Tyler.jpg" alt="Portrait" width="220" />
-        <audio class="audioPlayer" controls src="./assets/audio/bg.mp3"></audio>
-        <video controls width="480">
-          <source src="./assets/video/developing.mp4" type="video/mp4" />
-        </video>
-      </section>
+    <div class="window">
+      <div class="terminal-shell">
+        <aside class="sidebar">
+          <div id="current-date"></div>
+          <span class="sidebar-title">Creating The Future</span>
+          <div class="avatar">
+            <img
+              class="avatarImg"
+              src="./assets/images/Tyler.jpg"
+              alt="portrait"
+            />
+          </div>
 
-      <section>
-        <h2>Contact Me</h2>
-        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
-          <label>First name <input name="first_name" required /></label><br />
-          <label>Last name <input name="last_name" required /></label><br />
-          <label>Company <input name="company" /></label><br />
-          <label>Email <input name="email" type="email" required /></label
-          ><br />
-          <label>Phone <input name="phone" type="tel" /></label><br />
-          <label>Message <textarea name="message" rows="4"></textarea></label
-          ><br />
+          <h1 class="name">Tyler Fletcher</h1>
+          <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
+          <div class="socialIcons">
+            <nav class="dock">
+              <a href="https://github.com/ShadowMP252">
+                <button class="dock-btn" aria-label="Github">
+                  <img
+                    src="./assets/images/github-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/github-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/github-green-64x64.png'"
+                    alt="GitHub Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="https://www.linkedin.com/in/tyler-f-0a4347269/">
+                <button class="dock-btn" aria-label="LinkedIn">
+                  <img
+                    src="./assets/images/linkedin-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/linkedin-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/linkedin-green-64x64.png'"
+                    alt="LinkedIn Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="https://leetcode.com">
+                <button class="dock-btn" aria-label="LeetCode">
+                  <img
+                    src="./assets/images/leetcode-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/leetcode-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/leetcode-green-64x64.png'"
+                    alt="LeetCode Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="mailto:tfletcher@osiristechco.com">
+                <button class="dock-btn" aria-label="Email">
+                  <img
+                    src="./assets/images/email-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/email-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/email-green-64x64.png'"
+                    alt="Email Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+            </nav>
+          </div>
 
-          <fieldset>
-            <legend>Best contact time</legend>
-            <label><input type="radio" name="time" value="am" /> a.m.</label>
-            <label><input type="radio" name="time" value="pm" /> p.m.</label>
-            <label
-              ><input type="radio" name="time" value="any" checked />
-              anytime</label
+          <nav class="dock">
+            <a href="./resume.html">
+              <button class="dock-btn" aria-label="Home">
+                <img
+                  src="./assets/images/home-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/home-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/home-green-64x64.png'"
+                  alt="Home Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./cover-letter.html">
+              <button class="dock-btn" aria-label="Cover Letter">
+                <img
+                  src="./assets/images/cover-letter-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/cover-letter-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/cover-letter-green-64x64.png'"
+                  alt="Cover Letter Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./career-goals.html">
+              <button class="dock-btn" aria-label="Career Goals">
+                <img
+                  src="./assets/images/target-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/target-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/target-green-64x64.png'"
+                  alt="Career Goals Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <button class="dock-btn" aria-label="Music Button">
+              <img
+                src="./assets/images/music-note-gray-64x64.png"
+                onmouseout="this.src='./assets/images/music-note-gray-64x64.png'"
+                onmouseover="this.src='./assets/images/music-note-green-64x64.png'"
+                alt="Career Goals Icon"
+                class="homeIcons"
+                id="musicButton"
+              />
+              <audio id="audio" src="./assets/audio/bg.mp3"></audio>
+            </button>
+          </nav>
+        </aside>
+        <main class="pane">
+          <header class="site-header"><h1>Career Goals</h1></header>
+          <section class="letter-section">
+            <ol class="goalsList">
+              <li style="padding: 14px 0">
+                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              </li>
+              <li style="padding: 14px 0">
+                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              </li>
+              <li style="padding: 14px 0">
+                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              </li>
+              <li style="padding: 14px 0">
+                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              </li>
+              <li style="padding: 14px 0">
+                sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsasdfasdfasdfasdfdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg
+              </li>
+            </ol>
+            <form
+              action="https://wp.zybooks.com/form-viewer.php"
+              class="contactForm"
             >
-          </fieldset>
-
-          <label
-            >Preferred contact
-            <select name="pref">
-              <option>phone</option>
-              <option>email</option>
-              <option>text</option>
-            </select> </label
-          ><br />
-
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <small>&copy; <span id="year"></span> Tyler Fletcher</small>
-    </footer>
+              <div class="formGroup">
+                <label for="formFName">First Name</label>
+                <input type="text" id="formFName" required />
+              </div>
+              <div class="formGroup">
+                <label for="formLName">Last Name</label>
+                <input type="text" id="formLName" required />
+              </div>
+              <div class="formGroup">
+                <label for="formCompany">Company</label>
+                <input type="text" id="formCompany" required />
+              </div>
+              <div class="formGroup">
+                <label for="formPhone">Phone</label>
+                <input type="tel" id="formPhone" required />
+              </div>
+              <div class="formGroup">
+                <label for="formEmail">Email</label>
+                <input type="email" id="formEmail" required />
+              </div>
+              <div class="formGroup">
+                <label for="formMessage">Message</label>
+                <input type="textarea" id="formMessage" required />
+              </div>
+              <div class="formGroup">
+                <input type="radio" id="formRadioAM" required />
+                <input type="radio" id="formRadioPM" required />
+                <input type="radio" id="formRadioAny" required />
+              </div>
+              <div class="selectForm">
+                <select>
+                  <option value="" disabled="disabled" selected="selected">
+                    Contact Method
+                  </option>
+                  <option value="1">Phone</option>
+                  <option value="2">Email</option>
+                  <option value="3">Text</option>
+                </select>
+              </div>
+              <div class="formGroup">
+                <button class="form-btn" aria-label="Email">
+                  <img
+                    src="./assets/images/paper-plane-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/paper-plane-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/paper-plane-green-64x64.png'"
+                    alt="Email Icon"
+                    class="formButton"
+                  />
+                </button>
+              </div>
+            </form>
+          </section>
+          <footer class="site-footer">
+            <small>&copy; <span id="year">2025</span> Tyler Fletcher</small>
+            <small>All Original Content</small>
+          </footer>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

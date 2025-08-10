@@ -34,6 +34,46 @@ body {
     align-items: center;  
 }
 
+select, button, textarea, input {font: inherit;}
+
+form{
+  display:grid;
+  gap: 2.5px;
+  margin: 0;
+  @media (width > 720px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+input {
+  background:rgba(255,255,255,0.02);
+  color: #33ff33;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 1ex 2ex;
+  width: 100%;
+}
+.form-btn{
+  width:42px; height:42px; border-radius:10px; border:0px solid #2b2b2b;
+  background: inherit; color:#C1C1C1; cursor:pointer;
+}
+
+.formButton{
+    width:24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formGroup {
+  display: grid;
+  gap: 2.5px;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
 .window {
   opacity: 1;
   background: transparent;     
@@ -240,7 +280,8 @@ body {
 /* Projects section */
 #projects-section .proj-wrap { 
   padding: 60px 30px; 
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  cursor: pointer; /* NOTE Work with this... go away, but still function */
 }
 .proj-svg { 
   width: 100%; 
@@ -274,8 +315,7 @@ body {
 
 .video-wrap {
   position: relative;
-  border: 1px solid var(--outline, #2a2a2a);
-  background: #0e0e0e;
+  background: inherit;
   padding: 25px 155px 25px 155px; 
   box-sizing: border-box;      
   max-width: 100%;   
@@ -286,7 +326,8 @@ body {
   max-width: 100%;
   height: auto;
   outline: none;
-  margin: 0 auto; 
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
 .video-annotations {
@@ -330,7 +371,7 @@ body {
   border: 1px solid var(--outline, #2a2a2a);
   background: #0e0e0e;
   border-radius: 12px;
-  padding: 25px 65px 25px 65px;
+  padding: 19.5px 55px 19.5px 55px;
   box-sizing: border-box;
   transition: transform .08s ease, border-color .12s ease;
 }

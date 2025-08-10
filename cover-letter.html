@@ -8,30 +8,159 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <audio class="audioPlayer" controls src="./assets/audio/bg.mp3"></audio>
-    <header class="site-header"><h1>Cover Letter</h1></header>
-    <nav class="dock">
-      <a href="./resume.html">Résumé</a> ·
-      <a href="./cover-letter.html">Cover Letter</a> ·
-      <a href="./career-goals.html">Career Goals</a>
-    </nav>
-    <main>
-      <section>
-        <article>
-          <h2>Dear Hiring Manager,</h2>
-          <p>
-            I’m a <em>systems‑minded</em> engineer who enjoys building clear
-            interfaces. My experience spans data platforms and embedded work.
-            <strong>Impact</strong> and maintainability are my north star.
-            <mark>Availability: immediate</mark>.
-          </p>
-          <p><span>Thank you for your time,</span><br />Tyler Fletcher</p>
-          <hr />
-        </article>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <small>&copy; <span id="year"></span> Tyler Fletcher</small>
-    </footer>
+    <div class="window">
+      <div class="terminal-shell">
+        <aside class="sidebar">
+          <div id="current-date"></div>
+          <span class="sidebar-title">Creating The Future</span>
+          <div class="avatar">
+            <img
+              class="avatarImg"
+              src="./assets/images/Tyler.jpg"
+              alt="portrait"
+            />
+          </div>
+
+          <h1 class="name">Tyler Fletcher</h1>
+          <p class="subtitle">Multi‑Discipline <br />Engineer | Architect</p>
+          <div class="socialIcons">
+            <nav class="dock">
+              <a href="https://github.com/ShadowMP252">
+                <button class="dock-btn" aria-label="Github">
+                  <img
+                    src="./assets/images/github-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/github-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/github-green-64x64.png'"
+                    alt="GitHub Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="https://www.linkedin.com/in/tyler-f-0a4347269/">
+                <button class="dock-btn" aria-label="LinkedIn">
+                  <img
+                    src="./assets/images/linkedin-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/linkedin-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/linkedin-green-64x64.png'"
+                    alt="LinkedIn Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="https://leetcode.com">
+                <button class="dock-btn" aria-label="LeetCode">
+                  <img
+                    src="./assets/images/leetcode-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/leetcode-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/leetcode-green-64x64.png'"
+                    alt="LeetCode Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+              <a href="mailto:tfletcher@osiristechco.com">
+                <button class="dock-btn" aria-label="Email">
+                  <img
+                    src="./assets/images/paper-plane-gray-64x64.png"
+                    onmouseout="this.src='./assets/images/paper-plane-gray-64x64.png'"
+                    onmouseover="this.src='./assets/images/paper-plane-green-64x64.png'"
+                    alt="Email Icon"
+                    class="homeIcons"
+                  />
+                </button>
+              </a>
+            </nav>
+          </div>
+
+          <nav class="dock">
+            <a href="./resume.html">
+              <button class="dock-btn" aria-label="Home">
+                <img
+                  src="./assets/images/home-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/home-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/home-green-64x64.png'"
+                  alt="Home Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./cover-letter.html">
+              <button class="dock-btn" aria-label="Cover Letter">
+                <img
+                  src="./assets/images/cover-letter-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/cover-letter-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/cover-letter-green-64x64.png'"
+                  alt="Cover Letter Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <a href="./career-goals.html">
+              <button class="dock-btn" aria-label="Career Goals">
+                <img
+                  src="./assets/images/target-gray-64x64.png"
+                  onmouseout="this.src='./assets/images/target-gray-64x64.png'"
+                  onmouseover="this.src='./assets/images/target-green-64x64.png'"
+                  alt="Career Goals Icon"
+                  class="homeIcons"
+                />
+              </button>
+            </a>
+            <button class="dock-btn" aria-label="Music Button">
+              <img
+                src="./assets/images/music-note-gray-64x64.png"
+                onmouseout="this.src='./assets/images/music-note-gray-64x64.png'"
+                onmouseover="this.src='./assets/images/music-note-green-64x64.png'"
+                alt="Career Goals Icon"
+                class="homeIcons"
+                id="musicButton"
+              />
+              <audio id="audio" src="./assets/audio/bg.mp3"></audio>
+            </button>
+          </nav>
+        </aside>
+        <main class="pane">
+          <header class="site-header"><h1>Cover Letter</h1></header>
+          <section class="letter-section">
+            <article>
+              <h2>Dear Hiring Manager,</h2>
+              <p>
+                I’m a <em>systems‑minded</em> engineer who enjoys building clear
+                interfaces. My experience spans data platforms and embedded
+                work. <strong>Impact</strong> and maintainability are my north
+                star. <mark>Availability: immediate</mark>. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p><span>Thank you for your time,</span><br />Tyler Fletcher</p>
+              <hr />
+            </article>
+          </section>
+          <footer class="site-footer">
+            <small>&copy; <span id="year"></span> Tyler Fletcher</small>
+            <small>All Original Content</small>
+          </footer>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
