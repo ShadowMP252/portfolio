@@ -11,6 +11,7 @@
         <div class="window">
         <div class="terminal-shell">
             <aside class="sidebar">
+            <div id="current-date"></div>
             <span class="sidebar-title">Creating The Future</span>
             <div class="avatar">
                 <img
@@ -57,12 +58,28 @@
                     />
                 </button>
                 </a>
+                <button class="dock-btn" aria-label="Music Button">
+                    <img
+                        src="./assets/images/music-note-gray-64x64.png"
+                        onmouseout="this.src='./assets/images/music-note-gray-64x64.png'"
+                        onmouseover="this.src='./assets/images/music-note-green-64x64.png'"
+                        alt="Career Goals Icon"
+                        class="homeIcons"
+                        id="musicButton"
+                    />
+                    <audio id="audio" src="./assets/audio/bg.mp3"></audio>
+                </button>
             </nav>
             </aside>
 
             <main class="pane">
             <h2 class="pane-title">Welcome To the Lower Level</h2>
             <section id="skills-section"></section>
+            <section id="certifications-section"></section>
+            <section id="experience-section"></section>
+            <section id="projects-section"></section>
+            <section id="video-section"></section>
+            <section id="blog-section"></section>
             <p class="prompt">
                 <span class="sig">></span>My name is
                 <strong style="color: yellow">Tyler Fletcher</strong>
@@ -77,7 +94,6 @@
             <p class="prompt" style="padding-top: 165px">
                 <span class="sig">></span>./<strong>skills</strong>
             </p>
-            <section id="experience-section"></section>
             </main>
         </div>
         </div>

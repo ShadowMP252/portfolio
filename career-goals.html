@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Goals</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><h1>Career Goals</h1></header>
+    <nav class="dock">
+      <a href="./resume.html">Résumé</a> ·
+      <a href="./cover-letter.html">Cover Letter</a> ·
+      <a href="./career-goals.html">Career Goals</a>
+    </nav>
+    <main>
+      <section>
+        <h2>Vision</h2>
+        <img src="./assets/images/Tyler.jpg" alt="Portrait" width="220" />
+        <audio class="audioPlayer" controls src="./assets/audio/bg.mp3"></audio>
+        <video controls width="480">
+          <source src="./assets/video/developing.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section>
+        <h2>Contact Me</h2>
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+          <label>First name <input name="first_name" required /></label><br />
+          <label>Last name <input name="last_name" required /></label><br />
+          <label>Company <input name="company" /></label><br />
+          <label>Email <input name="email" type="email" required /></label
+          ><br />
+          <label>Phone <input name="phone" type="tel" /></label><br />
+          <label>Message <textarea name="message" rows="4"></textarea></label
+          ><br />
+
+          <fieldset>
+            <legend>Best contact time</legend>
+            <label><input type="radio" name="time" value="am" /> a.m.</label>
+            <label><input type="radio" name="time" value="pm" /> p.m.</label>
+            <label
+              ><input type="radio" name="time" value="any" checked />
+              anytime</label
+            >
+          </fieldset>
+
+          <label
+            >Preferred contact
+            <select name="pref">
+              <option>phone</option>
+              <option>email</option>
+              <option>text</option>
+            </select> </label
+          ><br />
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; <span id="year"></span> Tyler Fletcher</small>
+    </footer>
+  </body>
+</html>
