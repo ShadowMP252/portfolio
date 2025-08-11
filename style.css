@@ -76,6 +76,11 @@ input {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+
 .window,
 .terminal-shell,
 .pane,
@@ -274,11 +279,19 @@ input {
   list-style: square;
 }
 
-.skills-table,
-.certification-table {
+.skills-table {
   border-collapse: collapse;
   width: 100%;
   margin: 28px 0 0 0;
+  color: var(--fg-soft);
+  table-layout: fixed;
+  background: transparent;
+}
+
+.certification-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0 0 0;
   color: var(--fg-soft);
   table-layout: fixed;
   background: transparent;
@@ -311,15 +324,21 @@ input {
 }
 
 .skills-table th:nth-child(1),
-.skills-table td:nth-child(1),
+.skills-table td:nth-child(1) {
+  width:12%;
+}
 .certification-table th:nth-child(1),
-.certification-table td:nth-child(1) {
-  width: 18%;
+.certification-table td:nth-child(1),
+.skills-table th:nth-child(4),
+.skills-table td:nth-child(4) {
+  width: 20%;
 }
 .skills-table th:nth-child(2),
 .skills-table td:nth-child(2),
 .certification-table th:nth-child(2),
-.certification-table td:nth-child(2) {
+.certification-table td:nth-child(2),
+.certification-table th:nth-child(4),
+.certification-table td:nth-child(4) {
   width: 12%;
   text-align: center;
 }

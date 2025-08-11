@@ -140,6 +140,7 @@ async function animatePane() {
   // intro lines (resume page)
   const prompts = Array.from(pane.querySelectorAll("p.prompt"));
   const hr = pane.querySelector("hr.rule");
+  const quote = pane.querySelector("div.quote");
 
   if (prompts.length) {
     pane.style.minHeight = pane.offsetHeight + "px";
@@ -158,14 +159,17 @@ async function animatePane() {
 
       const spans = wrapTextNodes(after);
       moveCursorAfter(after);
-      await typeAcross(spans, 48);
+      await typeAcross(spans, 23);
       await wait(140);
 
       p.innerHTML = originals.get(p);
     }
 
+    await wait(8000);
+
     if (!prefersReduced) await wait(600);
     hr?.remove();
+    quote?.remove();
     prompts.forEach((p) => p.remove());
   }
 
@@ -213,11 +217,12 @@ async function showSkills() {
   const ul = document.createElement("ul");
   ul.style.margin = "8px 0 0 22px";
   ul.innerHTML = `
-    <li>Python • Flask • Data wrangling</li>
-    <li>JavaScript • DOM • Async</li>
-    <li>HTML5 / CSS • Responsive layouts</li>
-    <li>Java • </li>
-    <li>C++ • </li>
+    <li>Systems Architecture and Embedded AI</li>
+    <li>Python, Java, C++, Lua, Rust, Go, JavaScript</li>
+    <li>Data Engineering and Forecast Modeling</li>
+    <li>Full-Stack Web Development</li>
+    <li>Robotics and Edge Computing</li>
+    <li>Cloud and On-Prem Deployment Automation</li>
   `;
 
   const table = document.createElement("table");
@@ -228,13 +233,13 @@ async function showSkills() {
       <tr><th>Tech</th><th>Years</th><th>Level</th><th>Notes</th></tr>
     </thead>
     <tbody>
-      <tr><td>Python</td><td>10</td><td>Advanced</td><td>APIs, data tasks</td></tr>
-      <tr><td>JavaScript</td><td>6</td><td>Advanced</td><td>Vanilla, DOM, fetch</td></tr>
-      <tr><td>HTML/CSS</td><td>6</td><td>Advanced</td><td>Grid/Flex, a11y</td></tr>
-      <tr><td>Java</td><td>3</td><td>Proficient</td><td>Engines, UI, Networking</td></tr>
-      <tr><td>C++</td><td>3</td><td>Proficient</td><td>Memory Modeling, Low Level Optimization, Engine Design</td></tr>
-      <tr><td>Robotics</td><td>1</td><td>Basic</td><td>Plastics, CF, Assembly, Modeling</td></tr>
-      <tr><td>Embedded-Devices</td><td>4</td><td>Advanced</td><td>Kernal Mapping, Fine Tuning, Deployments</td></tr>
+      <tr><td>Python</td><td>10</td><td>Advanced</td><td>AI/ML, automation, robotics, backend.</td></tr>
+      <tr><td>JavaScript</td><td>6</td><td>Advanced</td><td>Full-stack, UI/UX, real-time apps.</td></tr>
+      <tr><td>HTML/CSS</td><td>6</td><td>Advanced</td><td>Pixel-perfect, responsive, animations.</td></tr>
+      <tr><td>Lua</td><td>4</td><td>Advanced</td><td>Embedded scripting, game/robotics.</td></tr>
+      <tr><td>Java</td><td>3</td><td>Proficient</td><td>Backend, OOP, academic projects.</td></tr>
+      <tr><td>C++</td><td>3</td><td>Proficient</td><td>Systems, game engines, high-perf apps.</td></tr>
+      <tr><td>Go</td><td>1</td><td>Basic</td><td>APIs, concurrency, microservices.</td></tr>
     </tbody>
   `;
 
@@ -251,7 +256,7 @@ async function showSkills() {
   scrollLine.className = "scrollLine";
   scrollLine.innerHTML = '<span class="sig">></span> <span class="cmd"> echo "Use ↑ / ↓ to navigate" </span>';
   scrollLine.style.marginBottom = "-25px";
-  scrollLine.style.marginTop= "127px";
+  scrollLine.style.marginTop= "105px";
   mount.appendChild(scrollLine);
 
   const cmd = scrollLine.querySelector(".cmd");
@@ -276,19 +281,17 @@ async function showCertifications() {
       <tr><th>Certification</th><th>Issuer</th><th>Status</th><th>Year</th></tr>
     </thead>
     <tbody>
-      <tr><td>CompTIA Network+</td><td>CompTIA</td><td>In Progress</td><td>2025</td></tr>
-      <tr><td>AWS CCP</td><td>Amazon</td><td>Planned</td><td>2025</td></tr>
-      <tr><td>Python PCEP/PCAP</td><td>OpenEDG</td><td>Completed</td><td>2023</td></tr>
-      <tr><td>CompTIA Network+</td><td>CompTIA</td><td>In Progress</td><td>2025</td></tr>
-      <tr><td>AWS CCP</td><td>Amazon</td><td>Planned</td><td>2025</td></tr>
-      <tr><td>Python PCEP/PCAP</td><td>OpenEDG</td><td>Completed</td><td>2023</td></tr>
-      <tr><td>CompTIA Network+</td><td>CompTIA</td><td>In Progress</td><td>2025</td></tr>
-      <tr><td>AWS CCP</td><td>Amazon</td><td>Planned</td><td>2025</td></tr>
-      <tr><td>Python PCEP/PCAP</td><td>OpenEDG</td><td>Completed</td><td>2023</td></tr>
-      <tr><td>CompTIA Network+</td><td>CompTIA</td><td>In Progress</td><td>2025</td></tr>
+      <tr><td>Microsoft Certified: Azure Data Engineer Associate</td><td>Microsoft</td><td>Active</td><td>2026</td></tr>
+      <tr><td>AWS Certified Solutions Architect</td><td>AWS</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>AWS Machine Learning Specialist</td><td>AWS</td><td>In Progress</td><td>2027</td></tr>
+      <tr><td>Java Developer</td><td>WGU</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>Back-End Developer</td><td>WGU</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>AI Optimization Developer</td><td>WGU</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>Linux Essentials</td><td>LPI</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>ITIL® 4 Foundation Certification</td><td>ITIL</td><td>In Progress</td><td>2026</td></tr>
+      <tr><td>Microsoft Certified: Azure AI Engineer Associate</td><td>Microsoft</td><td>In Progress</td><td>2027</td></tr>
     </tbody>
   `;
-  table.style.marginBottom = "135px";
 
   mount.innerHTML = "";
   mount.append(header, table);
@@ -302,7 +305,7 @@ async function showCertifications() {
   const scrollLine = document.createElement("p");
   scrollLine.innerHTML = '<span class="sig">></span> <span class="cmd"> echo "Use ↑ / ↓ to navigate" </span>';
   scrollLine.style.marginBottom = "-25px";
-  scrollLine.style.marginTop = "89px";
+  scrollLine.style.marginTop = "140px";
   mount.appendChild(scrollLine);
 
   moveCursorAfter(scrollLine.querySelector(".cmd"));
@@ -319,9 +322,9 @@ async function showExperience() {
   header.textContent = '> java -cp "out:libs/*" experience.java ';
 
   const data = [
-    { title: "Systems Architect – Osiris Tech Co", body: "Designed and led distributed AI services. Built telemetry pipelines, CI/CD, and infra-as-code. Mentored team on perf and reliability." },
-    { title: "Senior Data/Platform Engineer",       body: "Owned ingestion → modeling → APIs. Optimized queries, caching layers, and observability. Drove 60% cost reduction." },
-    { title: "Robotics / Embedded R&D",            body: "Rapid prototyped edge inference on Jetson. Firmware tuning, sensor fusion, and control loops for mobile platforms." },
+    { title: "Data Engineer– Cedar Electronics", body: "Designed and led data architecture and pipelines. Built self-repairing ML-powered pipelines, CI/CD, dashboard engineering, forecasting, data modeling and Mentored team on perf and reliability." },
+    { title: "Systems Architect – Osiris Tech Co", body: "Designed and led distributed AI services. Built telemetry pipelines, CI/CD, and infra-as-code. Executed research and development on a solo team." },
+    { title: "Robotics / Embedded R&D - Osiris Tech co.", body: "Rapid prototyped edge inference on Jetson. Firmware tuning, sensor fusion, and control loops for mobile platforms." },
   ];
 
   const grid = document.createElement("div");
@@ -332,7 +335,7 @@ async function showExperience() {
     card.innerHTML = `<h4 class="exp-title">${title}</h4><p class="exp-body">${body}</p>`;
     grid.appendChild(card);
   });
-  grid.style.marginBottom = "155px";
+  grid.style.marginBottom = "133px";
 
   mount.innerHTML = "";
   mount.append(header, grid);
@@ -629,18 +632,78 @@ async function showBlogs() {
   header.textContent = "$ ./blogPosts ";
 
   const posts = [
-    { title: "Designing Terminal UX", sub: "Case study", blurb: "How I built a scroll‑locked terminal with typewriter prompts and physics-driven nodes.", links: [{label:"Read more",href:"#"}, {label:"Repo",href:"#"}] },
-    { title: "Physics Nodes", sub: "Dev log", blurb: "Collision tuning, throw velocities, and why tiny jitter fixes sticky overlaps.", links: [{label:"Read more",href:"#"}, {label:"Notes",href:"#"}] },
-    { title: "Video Pane", sub: "Implementation", blurb: "Keyboard controls (space/←/→/m/f) and keeping layout stable with box-sizing.", links: [{label:"Read more",href:"#"}, {label:"Demo",href:"#"}] },
-    { title: "Architecture Threads", sub: "Opinion", blurb: "Why systems thinking beats feature frenzy—and how to ship clean interfaces.", links: [{label:"Read more",href:"#"}, {label:"Slides",href:"#"}] },
-    { title: "Embedded Notes", sub: "R&D", blurb: "Edge inference patterns and timing budgets that actually hold up on device.", links: [{label:"Read more",href:"#"}, {label:"Benchmarks",href:"#"}] },
-    { title: "Data Pipelines", sub: "Playbook", blurb: "Ingestion → modeling → APIs with observability from day one. No heroics needed.", links: [{label:"Read more",href:"#"}, {label:"Code",href:"#"}] },
-    { title: "Designing Terminal UX", sub: "Case study", blurb: "How I built a scroll‑locked terminal with typewriter prompts and physics-driven nodes.", links: [{label:"Read more",href:"#"}, {label:"Repo",href:"#"}] },
-    { title: "Physics Nodes", sub: "Dev log", blurb: "Collision tuning, throw velocities, and why tiny jitter fixes sticky overlaps.", links: [{label:"Read more",href:"#"}, {label:"Notes",href:"#"}] },
-    { title: "Video Pane", sub: "Implementation", blurb: "Keyboard controls (space/←/→/m/f) and keeping layout stable with box-sizing.", links: [{label:"Read more",href:"#"}, {label:"Demo",href:"#"}] },
-    { title: "Architecture Threads", sub: "Opinion", blurb: "Why systems thinking beats feature frenzy—and how to ship clean interfaces.", links: [{label:"Read more",href:"#"}, {label:"Slides",href:"#"}] },
-    { title: "Embedded Notes", sub: "R&D", blurb: "Edge inference patterns and timing budgets that actually hold up on device.", links: [{label:"Read more",href:"#"}, {label:"Benchmarks",href:"#"}] },
-    { title: "Data Pipelines", sub: "Playbook", blurb: "Ingestion → modeling → APIs with observability from day one. No heroics needed.", links: [{label:"Read more",href:"#"}, {label:"Code",href:"#"}] },
+    { 
+      title: "Designing Terminal UX", 
+      sub: "Case Study", 
+      blurb: "Built a scroll-locked terminal with typewriter prompts, pane transitions, and SVG physics nodes.", 
+      links: [{label:"Read more",href:"#"}, {label:"Repo",href:"#"}] 
+    },
+    { 
+      title: "Designing AI for the Edge", 
+      sub: "Embedded Systems", 
+      blurb: "Low-latency AI inference on Jetson Orin: models, quantization, and thermal constraints.", 
+      links: [{label:"Read more",href:"#"}, {label:"Notes",href:"#"}] 
+    },
+    { 
+      title: "From Bash to Browser", 
+      sub: "Web Development", 
+      blurb: "Turning a terminal aesthetic into a portfolio site with interactive panes and CLI-style prompts.", 
+      links: [{label:"Read more",href:"#"}, {label:"Demo",href:"#"}] 
+    },
+    { 
+      title: "Architecture Threads", 
+      sub: "Opinion", 
+      blurb: "Why systems thinking beats feature creep; plus patterns for clean, maintainable interfaces.", 
+      links: [{label:"Read more",href:"#"}, {label:"Slides",href:"#"}] 
+    },
+    { 
+      title: "Embedded Notes", 
+      sub: "R&D", 
+      blurb: "Edge inference patterns and timing budgets that survive the jump from dev to device.", 
+      links: [{label:"Read more",href:"#"}, {label:"Benchmarks",href:"#"}] 
+    },
+    { 
+      title: "Data Pipelines", 
+      sub: "Playbook", 
+      blurb: "Ingestion, modeling, APIs with observability and zero-downtime deploys from day one.", 
+      links: [{label:"Read more",href:"#"}, {label:"Code",href:"#"}] 
+    },
+    { 
+      title: "The Art of Idle Worlds", 
+      sub: "Game Dev", 
+      blurb: "AFK mechanics that breathe life into worlds, balancing progression and player agency.", 
+      links: [{label:"Read more",href:"#"}, {label:"Repo",href:"#"}] 
+    },
+    { 
+      title: "AI Has Hit a Wall?", 
+      sub: "Opinion", 
+      blurb: "Why scaling bigger models isn’t enough and what’s next for the AI sector.", 
+      links: [{label:"Read more",href:"#"}, {label:"Notes",href:"#"}] 
+    },
+    { 
+      title: "Video Pane", 
+      sub: "Implementation", 
+      blurb: "Keyboard shortcuts (space/←/→/m/f) plus stable box-sizing for responsive video panes.", 
+      links: [{label:"Read more",href:"#"}, {label:"Demo",href:"#"}] 
+    },
+    { 
+      title: "Physics Engines", 
+      sub: "Dev Log", 
+      blurb: "Experimental physics engine to drive interactive SVG node graphs.", 
+      links: [{label:"Read more",href:"#"}, {label:"Slides",href:"#"}] 
+    },
+    { 
+      title: "Terminal UI Animations", 
+      sub: "Frontend", 
+      blurb: "Async typewriter effects, cursor control, and event-driven pane transitions in pure JS.", 
+      links: [{label:"Read more",href:"#"}, {label:"Benchmarks",href:"#"}] 
+    },
+    { 
+      title: "CLI-Style Portfolio", 
+      sub: "Design Notes", 
+      blurb: "Design philosophy behind blending retro terminal aesthetics with modern web tech.", 
+      links: [{label:"Read more",href:"#"}, {label:"Code",href:"#"}] 
+    },
   ];
 
   const grid = document.createElement("div");
@@ -669,7 +732,7 @@ async function showBlogs() {
 
   const scrollLine = document.createElement("p");
   scrollLine.innerHTML = '<span class="sig">></span> <span class="cmd"> echo "Use ↑ / ↓ to navigate" </span>';
-  scrollLine.style.margin = "55px 0 -25px";
+  scrollLine.style.margin = "35px 0 -25px";
   mount.appendChild(scrollLine);
   moveCursorAfter(scrollLine.querySelector(".cmd"));
 
