@@ -1,7 +1,3 @@
-/**
- * As you can see from below, I have extensive knowledge of JavaScript, as I work with JavaScript everyday for my professional job.
- */
-
 const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches === true;
 
 // utils
