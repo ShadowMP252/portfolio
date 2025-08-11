@@ -1,122 +1,131 @@
+<!-- Launch -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terminal Access</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <style>
-        body {
-            color: #33ff33;
-            font-family: 'NerdFont';
-            font-size: 1.2rem;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;  
-        }
+      body {
+        color: #33ff33;
+        font-family: "NerdFont";
+        font-size: 1.2rem;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .terminal {
-            background-color: #0a0a0a;
-            padding: 30px 30px;
-            border-radius: 12px;
-            border: 2px solid #C1C1C1;
-            max-width: 800px;
-            width: 80%;
-            white-space: pre-wrap;
-            overflow: hidden;
-            box-shadow: 0 0 15px #121312;
-        }
+      .terminal {
+        background-color: #0a0a0a;
+        padding: 30px 30px;
+        border-radius: 12px;
+        border: 2px solid #c1c1c1;
+        max-width: 800px;
+        width: 80%;
+        white-space: pre-wrap;
+        overflow: hidden;
+        box-shadow: 0 0 15px #121312;
+      }
 
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            background-color: #33ff33;
-            animation: blink 1s infinite;
-        }
+      .cursor {
+        display: inline-block;
+        width: 10px;
+        background-color: #33ff33;
+        animation: blink 1s infinite;
+      }
 
-        @keyframes blink {
-            50% { background-color: transparent; }
+      @keyframes blink {
+        50% {
+          background-color: transparent;
         }
+      }
 
-        .hidden-input {
-            position: absolute;
-            left: -9999px;
-        }
+      .hidden-input {
+        position: absolute;
+        left: -9999px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="terminal" id="terminal">
-        <div>$ Initializing system...</div>
+      <div>$ Initializing system...</div>
     </div>
 
-    <input type="password" id="hiddenInput" class="hidden-input" autocomplete="off">
+    <input
+      type="password"
+      id="hiddenInput"
+      class="hidden-input"
+      autocomplete="off"
+    />
 
     <script>
-        const term = document.getElementById('terminal');
-        const hiddenInput = document.getElementById('hiddenInput');
+      const term = document.getElementById("terminal");
+      const hiddenInput = document.getElementById("hiddenInput");
 
-        const lines = [
-            "$ Loading modules...",
-            "$ Connecting to secure server...",
-            "$ Authentication required.",
-            "",
-            "login: superadmin",
-            "password: ************************"
-        ];
+      const lines = [
+        "$ Loading modules...",
+        "$ Connecting to secure server...",
+        "$ Authentication required.",
+        "",
+        "login: superadmin",
+        "password: ************************",
+      ];
 
-        let i = 0, j = 0;
-        let textSpan = null;
+      let i = 0,
+        j = 0;
+      let textSpan = null;
 
-        const cursor = document.createElement('span');
-        cursor.className = 'cursor';
-        cursor.textContent = ' ';
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      cursor.textContent = " ";
 
-        function newLine(initial = "") {
-            const line = document.createElement('div');
-            textSpan = document.createElement('span');
-            textSpan.textContent = initial;
-            line.appendChild(textSpan);
+      function newLine(initial = "") {
+        const line = document.createElement("div");
+        textSpan = document.createElement("span");
+        textSpan.textContent = initial;
+        line.appendChild(textSpan);
 
-            if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
-            line.appendChild(cursor);
+        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+        line.appendChild(cursor);
 
-            term.appendChild(line);
-        }
+        term.appendChild(line);
+      }
 
-        function typeNormal(full) {
-            j = 0;
-            const t = setInterval(() => {
-            textSpan.textContent = full.slice(0, j++);
-            if (j > full.length) {
-                clearInterval(t);
-                setTimeout(next, 350);
-            }
-            }, 35);
-        }
+      function typeNormal(full) {
+        j = 0;
+        const t = setInterval(() => {
+          textSpan.textContent = full.slice(0, j++);
+          if (j > full.length) {
+            clearInterval(t);
+            setTimeout(next, 350);
+          }
+        }, 35);
+      }
 
-        function next() {
-            if (i >= lines.length) return finish();
+      function next() {
+        if (i >= lines.length) return finish();
 
-            const full = lines[i++];
-            newLine();
-            typeNormal(full);
-        }
+        const full = lines[i++];
+        newLine();
+        typeNormal(full);
+      }
 
-        function finish() {
-            newLine(" ");
-            newLine("$ ACCESS GRANTED");
-            setTimeout(() => {
-            newLine("$ Redirecting...");
-            setTimeout(() => {
-                window.location.href = "resume.html";
-            }, 1200);
-            }, 400);
-        }
+      function finish() {
+        newLine(" ");
+        newLine("$ ACCESS GRANTED");
+        setTimeout(() => {
+          newLine("$ Redirecting...");
+          setTimeout(() => {
+            window.location.href = "resume.html";
+          }, 1200);
+        }, 400);
+      }
 
-        setTimeout(next, 600);
+      setTimeout(next, 600);
     </script>
-
-</body>
+  </body>
 </html>

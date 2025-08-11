@@ -1,3 +1,11 @@
+/**
+ * @Auther Tyler Fletcher
+ * @Date 2028-08-11
+ * @Description Portfolio main script
+ * @File main.js
+ *
+ */
+
 const prefersReduced =
   window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches === true;
 
