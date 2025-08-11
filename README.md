@@ -63,7 +63,6 @@ project-root/ \
 - Local media files created by or licensed to the author.
 - This project was built for **WGU Web Development Fundamentals**.
 
----
 
-## License
-This project is for educational purposes only and may not be redistributed without permission.
+# WARNING !
+- If you are looking for inspiration, this was a fun project. However, I would not recommend copying anything from this for another WGU Web Development Project, as it will likely get flagged. I am not responsible for you getting flagged for un-original/copied content. 
